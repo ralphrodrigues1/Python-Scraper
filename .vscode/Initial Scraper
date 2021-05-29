@@ -1,0 +1,5 @@
+import requests
+
+URL = 'https://na.op.gg/summoner/userName=buiItdifferently'
+page = requests.get(URL)
+
