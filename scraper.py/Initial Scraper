@@ -1,5 +1,8 @@
+
 import requests
+from bs4 import BeautifulSoup
+website = requests.get('https://en.wikipedia.org/wiki/Cloud9_League_of_Legends')
+print(website) # checking for response (200) from Wiki page
 
-URL = 'https://na.op.gg/summoner/userName=buiItdifferently'
-page = requests.get(URL)
-
+soup = BeautifulSoup(website.text, 'html.parser')
+print(soup)
